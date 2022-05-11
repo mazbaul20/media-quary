@@ -4,9 +4,133 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Media query</title>
-</head>
+    <title>Web Development</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <style>
+        .container{
+            display:flex;
+            flex-direction:row;
+            margin:0px auto;
+        }
+        .food{
+           margin:10px;             
+           border:3px solid lightgray;
+           width:350px;
+           border-radius:30px;
+        }
+        .food img{
+            width:100%;
+            border-top-left-radius: 27px;
+            border-top-right-radius: 27px;
+        }
+        .food p{
+            font-size:18px;
+            text-align:justify;
+            padding:5px;
+        }
+        h1{
+            background-color: teal;
+            height:50px;
+            width:100%;
+            margin:0 auto;
+            color:white;
+            text-align:center;
+            padding:5px;
+        }
+        @media (max-width:350px){
+            .container{
+                display: flex;
+                flex-direction:column;
+            }
+            .container .food{
+                background-color: #efb8d2;
+                margin: 0px auto;
+                max-width:250px;
+                margin-bottom: 10px;
+            }
+        }
+        @media (min-width:350px){
+            .container{
+                display: flex;
+                flex-direction:column;
+            }
+            .container .food{
+                background-color: lightblue;
+                margin: 0px auto;
+                margin-bottom: 10px;
+            }
+        }
+        @media (min-width:760px){
+            .container{
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+            }
+            .container .food{
+                background-color: #cde6ad;
+            }
+        }
+        @media (min-width:960px){
+            .container{
+                display: grid;
+                grid-gap: 10px;
+                grid-template-columns: repeat(3,1fr);
+                justify-content: center;
+            }
+            .container .food{
+                background-color: rgb(154, 197, 226);
+                max-width:282px;
+            }
+        }
+        @media (min-width:1200px){
+            .container{
+                display: grid;
+                grid-gap: 10px;
+                grid-template-columns: repeat(4,1fr);
+                justify-content: center;
+            }
+            .container .food{
+                background-color: rgb(197, 171, 171);
+                max-width:300px;
+            }
+        }
+    </style>
+</head> 
 <body>
-    hello media query
+    <h1>Responsive Design</h1>
+    <div class="container">
+        <div class="food">
+            <img src="images/healthy food.jpg" alt="">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla explicabo animi asperiores totam cumque voluptatum blanditiis sapiente officiis nobis reiciendis.</p>
+        </div>
+        <div class="food">
+            <img src="images/healthy food.jpg" alt="">
+            <p>Placeat vel autem ratione recusandae maxime natus harum ducimus dolorum, eos eveniet obcaecati soluta, sunt asperiores rem quos quod sapiente.</p>
+        </div>
+        <div class="food">
+            <img src="images/healthy food.jpg" alt="">
+            <p>Veritatis non obcaecati in harum, maxime ducimus rem eos vel hic maiores consequuntur exercitationem dolorem nam temporibus nobis voluptas odio.</p>
+        </div>
+        <div class="food">
+            <img src="images/healthy food.jpg" alt="">
+            <p>Maxime iusto perspiciatis quasi molestiae? Hic, reiciendis. Impedit enim eligendi neque? Perspiciatis vero libero ipsam ab eos mollitia delectus accusamus.</p>
+        </div>
+        <div class="food">
+            <img src="images/healthy food.jpg" alt="">
+            <p>Quia iste, ullam quisquam accusamus quis corrupti magni dicta libero rerum! Vitae deleniti est repellendus mollitia consequuntur distinctio error quaerat.</p>
+        </div>
+        <div class="food">
+            <img src="images/healthy food.jpg" alt="">
+            <p>Provident ipsa est quos deleniti commodi exercitationem dignissimos qui tempora obcaecati vitae suscipit, quaerat corporis, fugiat repellendus ex debitis dolores!</p>
+        </div>
+        <div class="food">
+            <img src="images/healthy food.jpg" alt="">
+            <p>Provident ipsa est quos deleniti commodi exercitationem dignissimos qui tempora obcaecati vitae suscipit, quaerat corporis, fugiat repellendus ex debitis dolores!</p>
+        </div>
+        <div class="food">
+            <img src="images/healthy food.jpg" alt="">
+            <p>Provident ipsa est quos deleniti commodi exercitationem dignissimos qui tempora obcaecati vitae suscipit, quaerat corporis, fugiat repellendus ex debitis dolores!</p>
+        </div>
+    </div>
 </body>
 </html>
